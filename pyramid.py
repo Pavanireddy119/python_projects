@@ -1,8 +1,12 @@
 # Pyramid pattern using '*'
-def print_pyramid():
-    rows = int(input("Enter the number of rows: "))
-    for i in range(rows):
-        print(' ' * (rows - i - 1) + '*' * (2 * i + 1))
+def print_pyramid(rows):
+    for i in range(1, rows + 1):
+        print(' ' * (rows - i) + '*' * (2 * i - 1))
 
 if __name__ == "__main__":
-    print_pyramid()
+    try:
+        rows = int(input("Enter the number of rows for the pyramid: "))
+        print_pyramid(rows)
+    except ValueError:
+        print("Please enter a valid integer.")
+
