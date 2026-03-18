@@ -14,3 +14,4 @@ else:
 print("Test")
 print("From new branch")
 print("Another change from new branch")
+print("Change from master branch")
